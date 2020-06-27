@@ -1,0 +1,161 @@
+<html>
+<head>
+		<style>
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color:white;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: black;
+}
+
+
+#un{
+	float:right;
+	margin:0px 30px 30px 30px;
+	}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: green;
+}
+
+
+
+li a.active {
+  color: white;
+  background-color: black;
+}
+
+
+</style>
+<script>
+
+function passval()
+{
+	var name=document.getElementById("fname").value;
+	localStorage.setItem("firstname","Manasa Krishna");
+	
+	var mailid=document.getElementById("email").value;
+	localStorage.setItem("email","manasakrishna121@gmail.com");
+	
+	
+	var mobilenum=document.getElementById("phonenum").value;
+	localStorage.setItem("mobile","9876543210");
+	
+  
+ 
+	var gend=document.getElementById("female").value;
+	  localStorage.setItem("Gender","female");
+	
+	
+	localStorage.setItem("reasons","HTML, CSS, Javascript");
+	
+	
+	
+	localStorage.setItem("college","Vignan's University");
+	
+	
+	return false;
+	
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+	</head>
+	<body>
+		<h1 style="font-size:30px ;font-weight:900;text-align:center;">REGISTRATION PAGE</h1>
+	
+	<a href="https://www.iiit.ac.in"><img src="logoiiith.png" height="70px" width="70px"></a>
+	<a href="https://serc.iiit.ac.in/rdip" style="float:right;font-size:20px">RDIP</a><br>
+	<ul>
+  <li><a class="activ" href="projecthome.html">Home</a></li>
+  <li><a href="projectreg.html">Registration Form</a></li>
+  </ul><br>
+
+  
+  <form action="displaypage.html" method="get">
+		<table style="text-align:center;">
+			<tr>
+			
+			<td><label for="fname"><b>FirstName: </b></label></td>
+			<td><input type="text" id="fname" name="fname" ></td>
+			</tr>
+			<tr>
+			<td><label for="email"><b>email:</b></label></td>
+			<td><input type="email" id="email" name="email" ></td>
+			</tr>
+			<tr>
+			<td><label for="phonenum"><b>MobileNum:</b> </label></td>
+			<td><input type="number" id="phonenum" name="number" ></td>
+			</tr>
+			<tr>
+			<td><b>Gender &nbsp;&nbsp;</td><td></b><input type="radio" id="male" name="gen" value="male">
+			<label for="male">Male</label>
+			<input type="radio" id="female" name="gen" value="female" >
+			<label for="female">Female</label></td>
+			</tr>
+			<tr>
+			<td><b>Reason:</b></td><td><input type="checkbox" id="html" name="html" value="html">
+			<label for="html">HTML</label>
+			<input type="checkbox" id="css" name="css" value="css">
+			<label for="css">CSS</label>
+			<input type="checkbox" id="javascript" name="javascript" value="javascript">
+			<label for="javascript">JavaScript</label></td>
+			</tr>
+			<tr>
+			<td><label for="clgname"><b>College: </b>&nbsp;&nbsp;&#160;&nbsp;</label></td>
+			<td><input type="text" id="clgname" name="college"></td>
+			</tr>
+			<tr>
+				</table><br>
+			<input type="checkbox" id="dec" name="declaration" value="yes">
+			
+			<label for="dec"><b>I declare above details given by me are true.</b> </label>
+			<br>
+			<table>
+	<tr><td>	<input type="submit" value="submit" onclick="passval()"></td><td></td><td></td><td><input type="reset" value="reset"></td>	</tr>
+		
+			
+			</table>
+			
+		</form>
+		
+  
+  
+
+
+		
+		
+		
+		
+		</body>
+	
+
+
+
+
+</html>

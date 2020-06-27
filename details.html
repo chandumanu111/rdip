@@ -1,0 +1,90 @@
+<html>
+<head>
+	<style>
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color:white;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: black;
+}
+
+
+#un{
+	float:right;
+	margin:0px 30px 30px 30px;
+	}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: green;
+}
+
+
+
+li a.active {
+  color: white;
+  background-color: black;
+}
+	</style>
+</head>    
+
+<body>
+	<h1 style="font-size:30px ;font-weight:900;text-align:center;">Details</h1>
+	
+	<a href="https://www.iiit.ac.in"><img src="logoiiith.png" height="70px" width="70px"></a>
+	<a href="https://serc.iiit.ac.in/rdip" style="float:right;font-size:20px">RDIP</a><br>
+	<ul>
+  <li><a class="activ" href="projecthome.html">Home</a></li>
+  <li><a href="projectreg.html">Registration Form</a></li>
+  
+  </ul>
+<br>
+
+Name         : <span id="firname"></span><br>
+
+Email        : <span id="mailid"></span><br>
+
+Mobile no    : <span id="mobilenum"></span><br>
+
+Gender       : <span id="gen"></span><br>
+Reason       : <span id="reason"></span><br>
+
+College Name : <span id="collegename"></span><br>
+
+	
+<script>
+	
+	document.getElementById("firname").innerHTML=localStorage.getItem("firstname");
+	
+	document.getElementById("mailid").innerHTML=localStorage.getItem("email");
+	
+	document.getElementById("mobilenum").innerHTML=localStorage.getItem("mobile");
+	
+	document.getElementById("gen").innerHTML=localStorage.getItem("Gender");
+	var re=localStorage.getItem("reasons");
+	document.getElementById("reason").innerHTML=re;
+	
+	document.getElementById("collegename").innerHTML=localStorage.getItem("college");
+	
+	
+	
+	
+</script>
+
+
+</body>
+
+</html>
