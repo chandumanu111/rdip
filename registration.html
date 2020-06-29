@@ -42,9 +42,38 @@ li a.active {
 
 </style>
 <script>
-
+	
+	 
+  
 function passval()
 {
+	var name = document.forms["myform"]["fname"];
+	var phone=document.forms["myform"]["phonenum"];
+	var letters = /^[A-Za-z]+$/;
+     if(name.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+name.focus();
+return false;
+}
+var phoneno =/^[0-9]+$/;
+  if((phone.value.match(phoneno)))
+        {
+      return true;
+        }
+      else
+        {
+        alert("phone number should be 10 digits");
+        return false;
+        }
+	
+	
+	
+	
 	var name=document.getElementById("fname").value;
 	localStorage.setItem("firstname","Manasa Krishna");
 	
@@ -97,7 +126,7 @@ function passval()
   </ul><br>
 
   
-  <form action="displaypage.html" method="get">
+  <form action="details.html" method="get"  name="myform" >
 		<table style="text-align:center;">
 			<tr>
 			
