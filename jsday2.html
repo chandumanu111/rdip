@@ -1,0 +1,55 @@
+<html>
+<head>
+	JS PAGE
+</head>
+<body>
+	<p id="demo"></p>
+
+<script>
+var datein=window.prompt("enter date");
+var num=window.prompt("enter any number");
+
+var fibnum=window.prompt("enter fib length");
+console.log(datein);
+if(num>=10 && num<=100)
+{
+	document.write("<br>"+num+": number is in between 10-100");
+	
+	} 
+else
+{
+	document.write(num+"number is not in between 10-100");
+	
+	
+}
+var n1=0,i,n2=1,sum;
+if(fibnum<3){
+	document.write("<br>"+"0 1");
+	
+	}
+else{
+	
+	document.write("<br>"+"0 1");
+try
+{	
+for (i=0;i<fibnum-2;i++)
+{
+	sum=n1+n2;
+	document.write(" "+sum);
+	n1=n2;
+	n2=sum;
+	
+	
+}	
+}
+catch(err)
+{
+	document.getElementById("demo").innerHTML = err.message;
+}
+	
+	
+}
+</script>
+</body>
+
+</html>
