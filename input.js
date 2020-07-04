@@ -1,18 +1,22 @@
 function valuecal(result){
     calculatorForm.evalresult.value = calculatorForm.evalresult.value + result;
+    return false;
 }
 function clr() 
 { 
-			calculatorForm.evalresult.value=" " 
+			calculatorForm.evalresult.value=" " ;
+			return false;
 } 
 function sqrt(result)
 {
 t=Math.sqrt(result)
-calculatorForm.evalresult.value=t
+calculatorForm.evalresult.value=t;
+return false;
 }
 function abs(result)
 {
-	calculatorForm.evalresult.value=Math.abs(result)
+	calculatorForm.evalresult.value=Math.abs(result);
+	return false;
 }
 function validation()
 {
@@ -52,6 +56,7 @@ var palindrome=document.getElementById("pal").value;
 	else{
 		alert("not a palindrome");
 		}
+	return false;
 }
 
 function reverseString(str) {
@@ -87,5 +92,6 @@ else
 {
 alert(S1+","+S2+","+"are anagrams");	
 }
+return false;
 	
 }
