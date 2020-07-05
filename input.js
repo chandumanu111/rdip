@@ -72,26 +72,65 @@ function anagram()
 {
 var S1=document.getElementById("string1").value;
 var S2=document.getElementById("string2").value;
-var s1=S1.replaceAll("//s","");
-var s2=S2.replaceAll("//s","");
-alert(s1+" "+s2);
-var s1=s1.toLowerCase();
-var s2=s2.toLowerCase();
-var split1=s1.split("");
-var split2=s2.split("");
-var sort1=split1.sort();
-var sort2=split2.sort();
-var str1=sort1.join("");
-var str2=sort2.join("");
-if(str1!=str2)
+//alert(S1+" "+S2);
+ var str1=S1.replace(/\s+/g,"");
+ //alert(str1);
+ var str2=S2.replace(/\s+/g,"");
+ //alert(str2);
+ 
+var con1=str1.toLowerCase();
+var con2=str2.toLowerCase();
+
+var arr1=con1.split("");
+var arr2=con2.split("");
+arr1.sort();
+arr2.sort();
+//alert(arr1+" "+arr2);
+ var st1=arr1.join("");
+ var st2=arr2.join("");
+ //alert(st1+" "+st2);
+if(st1==st2)
 {
-	alert("strings are not anagrams");
-	
+alert("anagrams");	
 }
 else
 {
-alert(S1+","+S2+","+"are anagrams");	
+	alert("not anagrams");
 }
+
 return false;
 	
 }
+
+
+function rand()
+{
+var r1= Math.floor(Math.random() * (+1000 - +0) + +0);	
+var r2= Math.floor(Math.random() * (+1000 - +0) + +0);	
+
+document.getElementById("num1").value=r1;
+document.getElementById("num2").value=r2;
+
+var rem1=r1%3;
+var rem2=r2%3;
+if(rem1==0 && rem2==1 || rem2==0 && rem1==1)
+{
+	
+	document.getElementById("result").value="human survives";
+}
+else if(rem1==rem2)
+{
+	document.getElementById("result").value="tie";
+}
+else if(rem1==1 && rem2==2 || rem2==1 && rem1==2)
+{
+document.getElementById("result").value= "Cockroach survives";	
+}
+else if(rem1==0 && rem2==2 || rem2==0 && rem1==2)
+{
+document.getElementById("result").value="human dies";	
+}
+
+	return false;
+}
+
